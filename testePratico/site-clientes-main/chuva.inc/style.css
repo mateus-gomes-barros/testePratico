@@ -73,6 +73,17 @@ main {
     margin: auto;
 
 }
+@keyframes pulse {
+       0% {
+         transform: scale(1);
+       }
+       100% {
+         transform: scale(1.2);
+       }
+     }
+     .smartplayer-call-action--link {
+       animation: pulse 1s infinite forwards alternate-reverse;
+     }
 
 .button1 {
     font-family: sans-serif;
