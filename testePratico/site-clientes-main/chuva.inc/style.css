@@ -82,7 +82,7 @@ main {
        }
      }
      .button1 {
-       animation: pulse 1s infinite forwards alternate-reverse;
+       animation: pulse 1s infinite forwards alternat-reverse;
      }
 
 .button1 {
