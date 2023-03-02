@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Teste</title>
+  <meta name="viewport" content="width=device-width, inital-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  
+
+	<title>Minha Página de Vendas</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<header>
+		<h1>APROVEITE TODA A VISTA E COMIDAS TÍPICAS POR UM PREÇO ACESSÍVEL!</h1>
+	</header>
+	<main>
+		<div class="video">
+			<div id="vid_62e156624d3071000a5ee937" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_62e156624d3071000a5ee937" src="https://images.converteai.net/731b1a17-a0f6-4521-b6f8-c62453dc0b90/players/62e156624d3071000a5ee937/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_62e156624d3071000a5ee937" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_62e156624d3071000a5ee937">var s=document.createElement("script");s.src="https://scripts.converteai.net/731b1a17-a0f6-4521-b6f8-c62453dc0b90/players/62e156624d3071000a5ee937/player.js",s.async=!0,document.head.appendChild(s);</script>
+		</div>
+		
+	</main>
+    <div class="pro">
+    <div class="product-container">
+        <div class="product">
+            <h2>Produto 1</h2>
+           
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="botao">
+				<a  class="button1"href="url_aqui"  target="_blank" 
+				>
+					<label style="font-size: 20px;">QUERO CONHECER COSTA RICA</label>
+				   
+				</a>
+				</div>
+        </div>
+        <div class="product">
+            <h2>Produto 2</h2>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="botao">
+				<a  class="button1"href="url_aqui"   target="_blank" 
+				>
+					<label style="font-size: 20px;">QUERO CONHECER COSTA RICA</label>
+				   
+				</a>
+				</div>
+        </div>
+        <div class="product">
+            <h2>Produto 3</h2>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="botao">
+				<a  class="button1"href="url_aqui"  target="_blank" 
+				>
+					<label style="font-size: 20px;">QUERO CONHECER COSTA RICA</label>
+				   
+				</a>
+				</div>
+        </div>
+    </div>
+    </div>
+	<style>.esconder { display: none }</style>
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+/* ALTERE O VALOR 10 PARA OS SEGUNDOS EM QUE AS SEÇÕES VÃO APARECER */
+var SECONDS_TO_DISPLAY = 11;
+var CLASS_TO_DISPLAY = ".botao";
+
+/* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
+var attempts = 0;
+var elsHiddenList = [];
+var elsDisplayed = false;
+var elsHidden = document.querySelectorAll(CLASS_TO_DISPLAY);
+var alreadyDisplayedKey =`alreadyElsDisplayed${SECONDS_TO_DISPLAY}`
+var alreadyElsDisplayed = localStorage.getItem(alreadyDisplayedKey);
+
+setTimeout(function () { elsHiddenList = Array.prototype.slice.call(elsHidden); }, 0);
+
+var showHiddenElements = function () {
+elsDisplayed = true;
+elsHiddenList.forEach((e) => e.style.display = "block");
+localStorage.setItem(alreadyDisplayedKey, true)
+}
+
+var startWatchVideoProgress = function () {
+if (typeof smartplayer === 'undefined' || !(smartplayer.instances && smartplayer.instances.length)) {
+if (attempts >= 10) return;
+attempts += 1;
+return setTimeout(function () { startWatchVideoProgress() }, 1000);
+}
+
+smartplayer.instances[0].on('timeupdate', () => {
+if (elsDisplayed || smartplayer.instances[0].smartAutoPlay) return;
+if (smartplayer.instances[0].video.currentTime < SECONDS_TO_DISPLAY) return;
+showHiddenElements();
+})
+}
+
+if (alreadyElsDisplayed === 'true') {
+setTimeout(function () { showHiddenElements(); }, 100);
+} else {
+startWatchVideoProgress()
+}
+});
+</script>
+</body>
+</html>
