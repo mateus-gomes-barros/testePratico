@@ -81,7 +81,7 @@ main {
          transform: scale(1.2);
        }
      }
-     .smartplayer-call-action--link {
+     .botao {
        animation: pulse 1s infinite forwards alternate-reverse;
      }
 
