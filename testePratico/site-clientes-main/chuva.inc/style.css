@@ -81,7 +81,7 @@ main {
          transform: scale(1.2);
        }
      }
-     .button1 {
+     .botao {
        animation: pulse 1s infinite forwards alternat-reverse;
      }
 
